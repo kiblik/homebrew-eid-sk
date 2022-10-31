@@ -12,7 +12,6 @@ cask 'eid-sk' do
 
     livecheck do
         url "https://eidas.minv.sk/download"
-        regex(/sparkle:shortVersionString="(\d+(?:\.\d+)+)"\s+sparkle:os="macos"/i)
         regex(/eID klient (\d+(?:\.\d+)+) pre macOS/i)
     end
 
