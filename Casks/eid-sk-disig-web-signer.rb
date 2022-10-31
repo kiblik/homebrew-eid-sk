@@ -13,5 +13,4 @@ cask 'eid-sk-disig-web-signer' do
 
     pkg 'Disig_Web_Signer.pkg'
 
-    app 'Disig Web Signer.app'
 end
