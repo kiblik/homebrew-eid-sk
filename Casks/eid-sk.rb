@@ -20,9 +20,8 @@ cask "eid-sk" do
 
   app "eID_klient.app"
 
-  uninstall quit: "sk.minv.eID_klient",
+  uninstall quit:   "sk.minv.eID_klient",
             signal: [
               ["KILL", "sk.minv.eID_klient"],
             ]
-
 end
