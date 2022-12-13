@@ -34,7 +34,7 @@ jobs:
       - name: Re-run CI workflow
         uses: reitermarkus/rerun-workflow@1a15891377b6667377207cdd85b628b79ebd6f81
         with:
-          token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           once-label: ci-requeue
           continuous-label: ci-retry
           trigger-labels: ci-skip-appcast,ci-skip-install,ci-syntax-only
