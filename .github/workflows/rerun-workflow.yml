@@ -20,7 +20,7 @@ permissions:
 jobs:
   rerun-workflow:
     if: >
-      startsWith(github.repository, 'Homebrew/') &&
+      startsWith(github.repository, 'kiblik/homebrew-') &&
       (
         github.event.label.name == 'ci-requeue' ||
         github.event.label.name == 'ci-retry' ||

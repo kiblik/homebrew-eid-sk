@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   update:
-    if: startsWith(github.repository, 'Homebrew/')
+    if: startsWith(github.repository, 'kiblik/homebrew-')
     strategy:
       matrix:
         os:
