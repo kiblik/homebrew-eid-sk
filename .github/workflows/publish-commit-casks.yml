@@ -25,7 +25,7 @@ jobs:
       - name: Post comment once started
         uses: Homebrew/actions/post-comment@master
         with:
-          token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
+          token: ${{secrets.GITHUB_TOKEN}}
           issue: ${{github.event.inputs.pull_request}}
           body: ":shipit: @${{github.actor}} has [triggered a merge](${{github.event.repository.html_url}}/actions/runs/${{github.run_id}})."
           bot_body: ":robot: A scheduled task has [triggered a merge](${{github.event.repository.html_url}}/actions/runs/${{github.run_id}})."
