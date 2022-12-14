@@ -37,6 +37,8 @@ jobs:
           token: ${{secrets.TOKEN}}
           # Bump only these formulae if outdated
           formulae: |
-            eid-sk-d-launcher1
-            eid-sk-disig-web-signer
             eid-sk
+            
+#            eid-sk-d-launcher1
+#            eid-sk-disig-web-signer
+            
