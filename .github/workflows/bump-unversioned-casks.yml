@@ -40,11 +40,11 @@ jobs:
         with:
           username: BrewTestBot
 
-      - name: Set up commit signing
-        id: set-up-commit-signing
-        uses: Homebrew/actions/setup-commit-signing@master
-        with:
-          signing_key: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY }}
+#      - name: Set up commit signing
+#        id: set-up-commit-signing
+#        uses: Homebrew/actions/setup-commit-signing@master
+#        with:
+#          signing_key: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY }}
 
       # Workaround until the `cache` action uses the changes from
       # https://github.com/actions/toolkit/pull/580.
