@@ -1,28 +1,35 @@
-name: Bump formula
+name: Bump formulae
 
 on:
   push:
     paths:
-      - .github/workflows/bump-formula.yml
+      - .github/workflows/bump-formulae.yml
   schedule:
     - cron: "*/30 * * * *"
 
 concurrency:
-  group: bump-formula
+  group: bump-formulae
   cancel-in-progress: true
 
-# env:
-#   HOMEBREW_DEVELOPER: 1
-#   HOMEBREW_NO_AUTO_UPDATE: 1
+env:
+  HOMEBREW_DEVELOPER: 1
+  HOMEBREW_NO_AUTO_UPDATE: 1
 
 permissions:
   contents: read
 
 jobs:
-  bump-unversioned-casks:
+  bump-formulae:
     if: startsWith(github.repository, 'kiblik/homebrew-')
     runs-on: macos-11.0
     steps:
+
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+        with:
+          test-bot: false
+
       - name: Bump formulae
         uses: Homebrew/actions/bump-formulae@master
         with:
