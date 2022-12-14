@@ -1,0 +1,35 @@
+name: Bump formula
+
+on:
+  push:
+    paths:
+      - .github/workflows/bump-formula.yml
+  schedule:
+    - cron: "*/30 * * * *"
+
+concurrency:
+  group: bump-formula
+  cancel-in-progress: true
+
+# env:
+#   HOMEBREW_DEVELOPER: 1
+#   HOMEBREW_NO_AUTO_UPDATE: 1
+
+permissions:
+  contents: read
+
+jobs:
+  bump-unversioned-casks:
+    if: startsWith(github.repository, 'kiblik/homebrew-')
+    runs-on: macos-11.0
+    steps:
+      - name: Bump formulae
+        uses: Homebrew/actions/bump-formulae@master
+        with:
+          # Custom GitHub access token with only the 'public_repo' scope enabled
+          token: ${{secrets.TOKEN}}
+          # Bump only these formulae if outdated
+          formulae: |
+            eid-sk-d-launcher1
+            eid-sk-disig-web-signer
+            eid-sk
