@@ -16,5 +16,4 @@ cask "eid-sk-disig-web-signer" do
   pkg "Disig_Web_Signer.pkg"
 
   uninstall pkgutil: "sk.disig.WebSignerTray"
-
 end
