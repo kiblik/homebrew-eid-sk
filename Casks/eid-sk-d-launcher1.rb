@@ -1,5 +1,5 @@
 cask "eid-sk-d-launcher1" do
-  version :latest
+  version "1.0"
   sha256 :no_check
 
   # eidas.minv.sk/TCTokenService/download was verified as official when first introduced to the cask
