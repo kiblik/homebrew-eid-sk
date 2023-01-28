@@ -100,5 +100,4 @@ jobs:
       # https://github.com/actions/toolkit/pull/580.
       - name: Unlink workspace
         run: |
-          rm "${GITHUB_WORKSPACE}"
-          mkdir "${GITHUB_WORKSPACE}"
+          rm -r "${GITHUB_WORKSPACE}"
