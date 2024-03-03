@@ -1,6 +1,6 @@
 cask "eid-sk-disig-web-signer" do
-  version "2.0.7-1"
-  sha256 "da4229962fbf0c17c216516041e29991576ebd5d6f2d280d1e6bc01462bf727d"
+  version "2.2.0-1"
+  sha256 "9675c16c8b1de55fe1cacfea98ce6481b415294402cfeeadfba4b5143cf460ef"
 
   url "https://download.disigcdn.sk/cdn/products/websigner2/Disig_Web_Signer_#{version}.dmg",
       verified: "download.disigcdn.sk/cdn/products/websigner2/"
