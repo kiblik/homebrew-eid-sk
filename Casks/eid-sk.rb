@@ -1,6 +1,6 @@
 cask "eid-sk" do
-  version "4.9"
-  sha256 "975044b1b5f2491678b8a556402df63def75b267216e1891559fcece16be5a78"
+  version "5.0"
+  sha256 "8c294f7b3a18931ace89e7d66c1e6f4461494f4f509d4c0aa06bd6a07c183eaa"
 
   url "https://eidas.minv.sk/downloadservice/eidklient/mac/eID_klient.dmg#v=#{version}",
       verified: "eidas.minv.sk/downloadservice/eidklient/mac/"
